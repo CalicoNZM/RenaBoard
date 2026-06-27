@@ -9,11 +9,7 @@ import type { NextConfig } from "next";
  */
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    serverActions: {},
-  },
   output: "standalone",
-  // If you later need external images, add them here, e.g. images: { remotePatterns: [{ hostname: "example.com" }] }
 };
 
 export default nextConfig;

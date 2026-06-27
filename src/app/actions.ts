@@ -29,9 +29,9 @@ export async function createAccountAction(data: {
         userId: user.id,
         tabs: JSON.stringify(["Dashboard", "Projects", "Notes"]),
         widgets: JSON.stringify([
-          { id: "clock-1", type: "clock" },
-          { id: "weather-1", type: "weather" },
-          { id: "notes-1", type: "notes" }
+          { id: "clock-1" },
+          { id: "weather-1" },
+          { id: "notion-1" }
         ]),
       }
     });
@@ -47,9 +47,12 @@ export async function createAccountAction(data: {
   }
 }
 
-export async function saveBoardLayoutAction(userId: string, widgetsJson: string) {
+export async function saveBoardLayoutAction(widgetsJson: string) {
   try {
-    // Find their first board
+    const cookieStore = await cookies();
+    const userId = cookieStore.get("renaboard_user_id")?.value;
+    if (!userId) return { success: false };
+
     const board = await prisma.board.findFirst({ where: { userId } });
     if (!board) return { success: false };
 

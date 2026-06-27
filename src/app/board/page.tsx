@@ -76,13 +76,8 @@ export default function Board() {
         const newIndex = items.findIndex(i => i.id === over.id);
         const newArray = arrayMove(items, oldIndex, newIndex);
         
-        // Save to DB via action
-        // In a real app we'd need userId, but let's grab it or rely on a wrapper. 
-        // Our save action currently takes userId. Wait, we don't have userId here.
-        // Let's modify the save action to just use the cookie!
-        
-        // We'll update the action to not need userId
-        // For now, we just update local state.
+        // Save to DB via action (uses cookie for userId)
+        saveBoardLayoutAction(JSON.stringify(newArray.map(w => ({ id: w.id }))));
         
         return newArray;
       });
