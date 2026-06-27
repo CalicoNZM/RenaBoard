@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 
+/**
+ * Next.js configuration for RenaBoard.
+ *
+ * - Enables Server Actions (experimental) which we use for creating accounts and saving board state.
+ * - Enables strict mode for better diagnostics.
+ * - Sets the output to "standalone" so Vercel can bundle the app without requiring a separate node_modules.
+ */
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  experimental: {
+    serverActions: {},
+  },
+  output: "standalone",
+  // If you later need external images, add them here, e.g. images: { remotePatterns: [{ hostname: "example.com" }] }
 };
 
 export default nextConfig;
