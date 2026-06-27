@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  password     String?
+  name         String?
+  profession   String?  // Answer to "What do you do?"
+  uiStyle      String?  // Answer to "Which UI would you like?"
+  themePreset  String?  // e.g. "preset-1"
+  customColors String?  // JSON string for custom colors
+  boards       Board[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Board {
+  id        String   @id @default(cuid())
+  name      String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tabs      String   // JSON array of tabs
+  widgets   String   // JSON array of widgets layout
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

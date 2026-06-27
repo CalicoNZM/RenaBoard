@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  /* Default variables */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #ffc107;
+  
+  --border-radius: 8px;
+  --border-width: 1px;
+  --border-color: #dee2e6;
+  
+  --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --inset-shadow: none;
+  --button-shadow: var(--box-shadow);
+  
+  --glass-bg: transparent;
+  --glass-blur: 0px;
+  --glass-border: none;
+  
+  --font-family: 'Inter', sans-serif;
+  --heading-font: 'Inter', sans-serif;
+  
+  --widget-bg: #ffffff;
+  --widget-border: 1px solid var(--border-color);
+  
+  --transition-speed: 0.3s;
+}
+
+/* 1. MAXIMALISM - NEO BRUTALISM */
+[data-theme="brutalism"] {
+  --bg-color: #fdf2e9;
+  --text-color: #111111;
+  --primary-color: #ff3366; 
+  --secondary-color: #20b2aa; 
+  --accent-color: #fce205;
+  
+  /* Really rounded right bottom edge */
+  --border-radius: 0px 0px 64px 0px;
+  --border-width: 4px;
+  --border-color: #000000;
+  
+  --box-shadow: 6px 6px 0px #000000;
+  --button-shadow: 4px 4px 0px #000000;
+  --inset-shadow: none;
+  
+  --font-family: 'Space Grotesk', sans-serif;
+  --heading-font: 'Space Grotesk', sans-serif;
+  
+  --widget-bg: #ffffff;
+  --widget-border: var(--border-width) solid var(--border-color);
+  
+  --transition-speed: 0.1s;
+}
+
+/* 2. FRUTIGER AERO (Windows Vista Style) */
+[data-theme="aero"] {
+  --bg-color: #dcedfa;
+  --text-color: #051622;
+  --primary-color: #0078d7;
+  --secondary-color: #3cb371;
+  --accent-color: #87ceeb;
+  
+  --border-radius: 12px;
+  --border-width: 1px;
+  --border-color: rgba(255, 255, 255, 0.7);
+  
+  /* Vista style heavy glass shadow and borders */
+  --box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255,255,255,1);
+  --button-shadow: inset 0 2px 4px rgba(255,255,255,0.8), 0 4px 8px rgba(0,0,0,0.2);
+  --inset-shadow: inset 0 0 30px rgba(255,255,255,0.6);
+  
+  /* Glossy glass gradient */
+  --glass-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.05) 100%);
+  --glass-blur: 16px;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.8);
+  
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  --widget-bg: var(--glass-bg);
+  --widget-border: var(--glass-border);
+  
+  --transition-speed: 0.4s;
+}
+
+/* 3. SKEUOMORPHISM (Improved Realism) */
+[data-theme="skeuomorphism"] {
+  --bg-color: #e4dfd0; 
+  --text-color: #2b251f;
+  --primary-color: #8c2111; 
+  --secondary-color: #3b422e; 
+  --accent-color: #d1b954; 
+  
+  --border-radius: 12px;
+  --border-width: 1px;
+  --border-color: #a89f8c;
+  
+  /* Enhanced realistic shadows mimicking 3D physical objects */
+  --box-shadow: 0 15px 30px rgba(0,0,0,0.4), inset 0 2px 3px rgba(255,255,255,0.6), inset 0 -2px 5px rgba(0,0,0,0.2);
+  --button-shadow: inset 0 2px 4px rgba(255,255,255,0.7), inset 0 -3px 4px rgba(0,0,0,0.4), 0 5px 8px rgba(0,0,0,0.5);
+  --inset-shadow: inset 0 4px 8px rgba(0,0,0,0.5);
+  
+  --font-family: 'Playfair Display', serif;
+  --heading-font: 'Playfair Display', serif;
+  
+  /* Subtle linen/paper gradient mix */
+  --widget-bg: linear-gradient(180deg, #f2efe5 0%, #dcd3b6 100%);
+  --widget-border: 1px solid #bba377;
+  
+  --transition-speed: 0.3s;
+}
+
+/* 4. NEO-MINIMALISM DARK (Nothing / iOS 18) */
+[data-theme="minimalism"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #e60000;
+  --secondary-color: #333333;
+  --accent-color: #ffffff;
+  
+  --border-radius: 24px;
+  --border-width: 1px;
+  --border-color: #222222;
+  
+  --box-shadow: none;
+  --button-shadow: none;
+  --inset-shadow: none;
+  
+  --glass-bg: rgba(25, 25, 25, 0.7);
+  --glass-blur: 20px;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.05);
+  
+  --font-family: 'Space Grotesk', sans-serif;
+  --heading-font: 'Inter', sans-serif;
+  
+  --widget-bg: #111111;
+  --widget-border: 1px solid #222222;
+  
+  --transition-speed: 0.3s;
+}
+
+/* 5. NEO-MINIMALISM LIGHT */
+[data-theme="minimalism-light"] {
+  --bg-color: #f5f5f5;
+  --text-color: #000000;
+  --primary-color: #e60000;
+  --secondary-color: #e0e0e0;
+  --accent-color: #000000;
+  
+  --border-radius: 24px;
+  --border-width: 1px;
+  --border-color: #e0e0e0;
+  
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --button-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --inset-shadow: none;
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-blur: 20px;
+  --glass-border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  --font-family: 'Space Grotesk', sans-serif;
+  --heading-font: 'Inter', sans-serif;
+  
+  --widget-bg: #ffffff;
+  --widget-border: 1px solid #e0e0e0;
+  
+  --transition-speed: 0.3s;
+}
+
+/* Base resets & applications */
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Global utility classes that use theme variables */
+.widget {
+  background: var(--widget-bg);
+  border: var(--widget-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: 20px;
+  transition: all var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Brutalism hack for inner elements inside widget so they don't leak out of the asymmetric border */
+[data-theme="brutalism"] .widget {
+  border-radius: 0px 0px 32px 0px;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--button-shadow);
+  padding: 12px 24px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--button-shadow);
+  padding: 12px 24px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
