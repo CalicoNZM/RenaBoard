@@ -111,11 +111,11 @@ export const WIDGET_REGISTRY: WidgetDef[] = [
   { id: "weather-1", name: "Weather Radar", category: "General", component: WeatherWidget },
   { id: "github-1", name: "GitHub Activity", category: "Developer", component: GitHubWidget },
   { id: "notion-1", name: "Notion Sync", category: "Productivity", component: NotionMockWidget, colSpan: 2 },
-  { id: "calc-1", name: "Scientific Calculator", category: "General", component: () => <div className="flex items-center gap-2"><Calculator/> Calculator Ready</div> },
-  { id: "tasks-1", name: "Task List", category: "Productivity", component: () => <div className="flex items-center gap-2"><CheckSquare/> 0/5 Tasks Done</div> },
-  { id: "cal-1", name: "Google Calendar", category: "Productivity", component: () => <div className="flex items-center gap-2"><Calendar/> Next Meeting: 2pm</div> },
-  { id: "sys-1", name: "System Monitor", category: "Developer", component: () => <div className="flex items-center gap-2"><Activity/> CPU: 14% RAM: 42%</div> },
-  { id: "news-1", name: "Hacker News", category: "General", component: () => <div className="flex items-center gap-2"><Newspaper/> Top: AI Takes Over</div> },
-  { id: "quote-1", name: "Daily Quote", category: "General", component: () => <div className="flex items-center gap-2"><Quote/> "Code is Poetry"</div> },
+  { id: "calc-1", name: "Scientific Calculator", category: "General", component: () => <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}><Calculator/> Calculator Ready</div> },
+  { id: "tasks-1", name: "Task List", category: "Productivity", component: () => <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}><CheckSquare/> 0/5 Tasks Done</div> },
+  { id: "cal-1", name: "Google Calendar", category: "Productivity", component: () => <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}><Calendar/> Next Meeting: 2pm</div> },
+  { id: "sys-1", name: "System Monitor", category: "Developer", component: () => <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}><Activity/> CPU: 14% RAM: 42%</div> },
+  { id: "news-1", name: "Hacker News", category: "General", component: () => <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}><Newspaper/> Top: AI Takes Over</div> },
+  { id: "quote-1", name: "Daily Quote", category: "General", component: () => <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}><Quote/> "Code is Poetry"</div> },
   ...generateMockWidgets()
 ];
